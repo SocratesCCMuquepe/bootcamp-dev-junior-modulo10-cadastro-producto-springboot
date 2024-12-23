@@ -1,10 +1,23 @@
 package ao.osti.product_backend.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="TBL_PRODUCT")
 public class Product {
     //Atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String description;
+
+    @ManyToOne
     private Category category;
     private boolean promotion;
     private boolean newProduct;
