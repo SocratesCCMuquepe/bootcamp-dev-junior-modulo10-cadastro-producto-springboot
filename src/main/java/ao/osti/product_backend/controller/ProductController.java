@@ -1,13 +1,9 @@
 package ao.osti.product_backend.controller;
 
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import ao.osti.product_backend.models.Product;
-import ao.osti.product_backend.models.Category;
-import ao.osti.product_backend.repositories.CategoryRepository;
-import ao.osti.product_backend.repositories.ProductRepository;
 import ao.osti.product_backend.services.ProductService;
 
 import java.net.URI;

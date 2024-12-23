@@ -9,7 +9,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import ao.osti.product_backend.models.Category;
 import ao.osti.product_backend.models.Product;
-import ao.osti.product_backend.repositories.CategoryRepository;
 import ao.osti.product_backend.repositories.ProductRepository;
 
 @Service
