@@ -27,8 +27,6 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
-    private List<Product> products = new ArrayList<>();
-
     @PostMapping("product")
     public ResponseEntity<Product> save(@RequestBody Product product) {
 
