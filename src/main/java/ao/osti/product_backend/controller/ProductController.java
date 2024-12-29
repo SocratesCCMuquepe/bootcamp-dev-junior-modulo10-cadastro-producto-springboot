@@ -26,7 +26,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PostMapping("product")
+    @PostMapping("products")
     public ResponseEntity<Product> save(@RequestBody Product product) {
         product = productService.save(product);
         URI location = ServletUriComponentsBuilder

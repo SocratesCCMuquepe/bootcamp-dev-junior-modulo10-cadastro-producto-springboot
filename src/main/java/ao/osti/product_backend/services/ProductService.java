@@ -39,14 +39,13 @@ public class ProductService {
     }
 
     public void update(int id, Product productUpdate) {
-        Product product = productRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found..!"));
+        Product product = getById(id);
 
         if (productUpdate.getCategory() == null) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Category can not be empty");
         }
 
-        Category category = categoryService.getById(id);
+        Category category = categoryService.getById(productUpdate.getCategory().getId());
 
         product.setName(productUpdate.getName());
         product.setDescription(productUpdate.getDescription());
